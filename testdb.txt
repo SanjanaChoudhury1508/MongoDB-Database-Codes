@@ -1,0 +1,599 @@
+use testdb
+
+switched to db testdb
+
+db.students.insertMany([
+  { "name": "Rahul", "age": 21, "course": "BCA", "marks": 85, "roll": 101 },
+  { "name": "Aisha", "age": 24, "course": "BBA", "marks": 67, "roll": 102 },
+  { "name": "Vikram", "age": 26, "course": "MBA", "marks": 92, "roll": 103 },
+  { "name": "Sneha", "age": 23, "course": "BCA", "marks": 59, "roll": 104 },
+  { "name": "Dev", "age": 27, "course": "BSc", "marks": 74, "roll": 105 }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc6bd570cd656d744293e'),
+    '1': ObjectId('685fc6bd570cd656d744293f'),
+    '2': ObjectId('685fc6bd570cd656d7442940'),
+    '3': ObjectId('685fc6bd570cd656d7442941'),
+    '4': ObjectId('685fc6bd570cd656d7442942')
+  }
+}
+
+db.employees.insertMany([
+  { "name": "Anu", "salary": 28000, "department": "HR" },
+  { "name": "Ravi", "salary": 35000, "department": "Sales" },
+  { "name": "Kiran", "salary": 42000, "department": "IT" },
+  { "name": "Meena", "salary": 15000, "department": "Support" },
+  { "name": "Ajay", "salary": 50000, "department": "Finance" }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc771570cd656d7442943'),
+    '1': ObjectId('685fc771570cd656d7442944'),
+    '2': ObjectId('685fc771570cd656d7442945'),
+    '3': ObjectId('685fc771570cd656d7442946'),
+    '4': ObjectId('685fc771570cd656d7442947')
+  }
+}
+
+db.products.insertMany([
+  { "name": "Mouse", "price": 299 },
+  { "name": "Keyboard", "price": 499 },
+  { "name": "Monitor", "price": 7999 },
+  { "name": "CPU", "price": 15000 },
+  { "name": "Pen Drive", "price": 999 }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc783570cd656d7442948'),
+    '1': ObjectId('685fc783570cd656d7442949'),
+    '2': ObjectId('685fc783570cd656d744294a'),
+    '3': ObjectId('685fc783570cd656d744294b'),
+    '4': ObjectId('685fc783570cd656d744294c')
+  }
+}
+
+db.users.insertMany([
+  { "username": "john_doe", "email": "john@example.com", "age": 29, "city": "Delhi", "createdAt": new Date("2024-05-01"), "active": true },
+  { "username": "anu_k", "email": "anu@gmail.com", "age": 35, "city": "Mumbai", "createdAt": new Date("2024-01-01"), "active": false },
+  { "username": "ravi_s", "email": "ravi@outlook.com", "age": 19, "city": "Bangalore", "createdAt": new Date("2024-03-15"), "active": true },
+  { "username": "nisha_r", "email": "nisha@yahoo.com", "age": 32, "city": "Bangalore", "createdAt": new Date("2024-02-10"), "active": true },
+  { "username": "dev_p", "email": "dev@gmail.com", "age": 24, "city": "Delhi", "createdAt": new Date("2024-04-01"), "active": false }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc7a6570cd656d744294d'),
+    '1': ObjectId('685fc7a6570cd656d744294e'),
+    '2': ObjectId('685fc7a6570cd656d744294f'),
+    '3': ObjectId('685fc7a6570cd656d7442950'),
+    '4': ObjectId('685fc7a6570cd656d7442951')
+  }
+}
+
+db.orders.insertMany([
+  { "orderId": 1, "status": "pending", "deliveryDate": null },
+  { "orderId": 2, "status": "shipped", "deliveryDate": new Date("2024-04-01") },
+  { "orderId": 3, "status": "delivered", "deliveryDate": new Date("2024-03-25") },
+  { "orderId": 4, "status": "cancelled", "deliveryDate": null },
+  { "orderId": 5, "status": "pending", "deliveryDate": new Date("2024-02-01") }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc7b4570cd656d7442952'),
+    '1': ObjectId('685fc7b4570cd656d7442953'),
+    '2': ObjectId('685fc7b4570cd656d7442954'),
+    '3': ObjectId('685fc7b4570cd656d7442955'),
+    '4': ObjectId('685fc7b4570cd656d7442956')
+  }
+}
+
+db.books.insertMany([
+  { "title": "2 States", "author": "Chetan Bhagat", "publishedYear": 2014 },
+  { "title": "The 3 Mistakes", "author": "Chetan Bhagat", "publishedYear": 2009 },
+  { "title": "Revolution 2020", "author": "Chetan Bhagat", "publishedYear": 2011 },
+  { "title": "Wings of Fire", "author": "APJ Abdul Kalam", "publishedYear": 2002 }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc7c5570cd656d7442957'),
+    '1': ObjectId('685fc7c5570cd656d7442958'),
+    '2': ObjectId('685fc7c5570cd656d7442959'),
+    '3': ObjectId('685fc7c5570cd656d744295a')
+  }
+}
+
+db.customers.insertMany([
+  { "name": "Ramesh", "city": "Delhi" },
+  { "name": "Suresh", "city": "Mumbai" },
+  { "name": "Pooja", "city": "Delhi" },
+  { "name": "Alok", "city": "Chennai" }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc7d0570cd656d744295b'),
+    '1': ObjectId('685fc7d0570cd656d744295c'),
+    '2': ObjectId('685fc7d0570cd656d744295d'),
+    '3': ObjectId('685fc7d0570cd656d744295e')
+  }
+}
+
+db.logs.insertMany([
+  { "event": "Login", "time": new Date() },
+  { "event": "Logout", "time": new Date() },
+  { "event": "File Upload", "time": new Date() },
+  { "event": "Password Change", "time": new Date() },
+  { "event": "Login", "time": new Date() },
+  { "event": "Logout", "time": new Date() },
+  { "event": "Login", "time": new Date() },
+  { "event": "Error", "time": new Date() },
+  { "event": "Warning", "time": new Date() },
+  { "event": "Logout", "time": new Date() },
+  { "event": "Login", "time": new Date() },
+  { "event": "Password Reset", "time": new Date() },
+  { "event": "Login", "time": new Date() },
+  { "event": "Logout", "time": new Date() },
+  { "event": "Download", "time": new Date() }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc7df570cd656d744295f'),
+    '1': ObjectId('685fc7df570cd656d7442960'),
+    '2': ObjectId('685fc7df570cd656d7442961'),
+    '3': ObjectId('685fc7df570cd656d7442962'),
+    '4': ObjectId('685fc7df570cd656d7442963'),
+    '5': ObjectId('685fc7df570cd656d7442964'),
+    '6': ObjectId('685fc7df570cd656d7442965'),
+    '7': ObjectId('685fc7df570cd656d7442966'),
+    '8': ObjectId('685fc7df570cd656d7442967'),
+    '9': ObjectId('685fc7df570cd656d7442968'),
+    '10': ObjectId('685fc7df570cd656d7442969'),
+    '11': ObjectId('685fc7df570cd656d744296a'),
+    '12': ObjectId('685fc7df570cd656d744296b'),
+    '13': ObjectId('685fc7df570cd656d744296c'),
+    '14': ObjectId('685fc7df570cd656d744296d')
+  }
+}
+
+db.sales.insertMany([
+  { "invoiceId": 1, "amount": 450 },
+  { "invoiceId": 2, "amount": 10000 },
+  { "invoiceId": 3, "amount": 300 },
+  { "invoiceId": 4, "amount": 5500 },
+  { "invoiceId": 5, "amount": 4999 }
+])
+
+db.students.insertOne({ name: "Rahul", age: 21, course: "BCA" })
+
+{
+  acknowledged: true,
+  insertedId: ObjectId('685fc8bf570cd656d7442973')
+}
+
+db.employees.insertMany([
+  { name: "Anu", salary: 28000, department: "HR" },
+  { name: "Ravi", salary: 35000, department: "Sales" }
+])
+
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685fc8d5570cd656d7442974'),
+    '1': ObjectId('685fc8d5570cd656d7442975')
+  }
+}
+
+db.products.find()
+
+{
+  _id: ObjectId('685fc783570cd656d7442948'),
+  name: 'Mouse',
+  price: 299
+}
+{
+  _id: ObjectId('685fc783570cd656d7442949'),
+  name: 'Keyboard',
+  price: 499
+}
+{
+  _id: ObjectId('685fc783570cd656d744294a'),
+  name: 'Monitor',
+  price: 7999
+}
+{
+  _id: ObjectId('685fc783570cd656d744294b'),
+  name: 'CPU',
+  price: 15000
+}
+{
+  _id: ObjectId('685fc783570cd656d744294c'),
+  name: 'Pen Drive',
+  price: 999
+}
+
+db.users.find({ age: { $gt: 25 } })
+
+{
+  _id: ObjectId('685fc7a6570cd656d744294d'),
+  username: 'john_doe',
+  email: 'john@example.com',
+  age: 29,
+  city: 'Delhi',
+  createdAt: 2024-05-01T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d744294e'),
+  username: 'anu_k',
+  email: 'anu@gmail.com',
+  age: 35,
+  city: 'Mumbai',
+  createdAt: 2024-01-01T00:00:00.000Z,
+  active: false
+}
+{
+  _id: ObjectId('685fc7a6570cd656d7442950'),
+  username: 'nisha_r',
+  email: 'nisha@yahoo.com',
+  age: 32,
+  city: 'Bangalore',
+  createdAt: 2024-02-10T00:00:00.000Z,
+  active: true
+}
+
+db.orders.find({ status: { $in: ["pending", "shipped"] } })
+
+{
+  _id: ObjectId('685fc7b4570cd656d7442952'),
+  orderId: 1,
+  status: 'pending',
+  deliveryDate: null
+}
+{
+  _id: ObjectId('685fc7b4570cd656d7442953'),
+  orderId: 2,
+  status: 'shipped',
+  deliveryDate: 2024-04-01T00:00:00.000Z
+}
+{
+  _id: ObjectId('685fc7b4570cd656d7442956'),
+  orderId: 5,
+  status: 'pending',
+  deliveryDate: 2024-02-01T00:00:00.000Z
+}
+
+db.users.updateOne(
+  { username: "john_doe" },
+  { $set: { email: "john@example.com" } }
+)
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+db.students.deleteOne({ roll: 101 })
+
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+db.employees.find({ salary: { $gte: 30000 } })
+
+{
+  _id: ObjectId('685fc771570cd656d7442944'),
+  name: 'Ravi',
+  salary: 35000,
+  department: 'Sales'
+}
+{
+  _id: ObjectId('685fc771570cd656d7442945'),
+  name: 'Kiran',
+  salary: 42000,
+  department: 'IT'
+}
+{
+  _id: ObjectId('685fc771570cd656d7442947'),
+  name: 'Ajay',
+  salary: 50000,
+  department: 'Finance'
+}
+{
+  _id: ObjectId('685fc8d5570cd656d7442975'),
+  name: 'Ravi',
+  salary: 35000,
+  department: 'Sales'
+}
+
+db.books.find({ author: "Chetan Bhagat", publishedYear: { $gt: 2010 } })
+
+{
+  _id: ObjectId('685fc7c5570cd656d7442957'),
+  title: '2 States',
+  author: 'Chetan Bhagat',
+  publishedYear: 2014
+}
+{
+  _id: ObjectId('685fc7c5570cd656d7442959'),
+  title: 'Revolution 2020',
+  author: 'Chetan Bhagat',
+  publishedYear: 2011
+}
+
+db.customers.countDocuments({ city: "Delhi" })
+2
+
+db.users.find().limit(5)
+
+{
+  _id: ObjectId('685fc7a6570cd656d744294d'),
+  username: 'john_doe',
+  email: 'john@example.com',
+  age: 29,
+  city: 'Delhi',
+  createdAt: 2024-05-01T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d744294e'),
+  username: 'anu_k',
+  email: 'anu@gmail.com',
+  age: 35,
+  city: 'Mumbai',
+  createdAt: 2024-01-01T00:00:00.000Z,
+  active: false
+}
+{
+  _id: ObjectId('685fc7a6570cd656d744294f'),
+  username: 'ravi_s',
+  email: 'ravi@outlook.com',
+  age: 19,
+  city: 'Bangalore',
+  createdAt: 2024-03-15T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d7442950'),
+  username: 'nisha_r',
+  email: 'nisha@yahoo.com',
+  age: 32,
+  city: 'Bangalore',
+  createdAt: 2024-02-10T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d7442951'),
+  username: 'dev_p',
+  email: 'dev@gmail.com',
+  age: 24,
+  city: 'Delhi',
+  createdAt: 2024-04-01T00:00:00.000Z,
+  active: false
+}
+
+db.logs.find().skip(10).limit(5)
+
+{
+  _id: ObjectId('685fc7df570cd656d7442969'),
+  event: 'Login',
+  time: 2025-06-28T10:45:51.949Z
+}
+{
+  _id: ObjectId('685fc7df570cd656d744296a'),
+  event: 'Password Reset',
+  time: 2025-06-28T10:45:51.949Z
+}
+{
+  _id: ObjectId('685fc7df570cd656d744296b'),
+  event: 'Login',
+  time: 2025-06-28T10:45:51.949Z
+}
+{
+  _id: ObjectId('685fc7df570cd656d744296c'),
+  event: 'Logout',
+  time: 2025-06-28T10:45:51.949Z
+}
+{
+  _id: ObjectId('685fc7df570cd656d744296d'),
+  event: 'Download',
+  time: 2025-06-28T10:45:51.949Z
+}
+
+db.products.find().sort({ price: 1 })
+
+{
+  _id: ObjectId('685fc783570cd656d7442948'),
+  name: 'Mouse',
+  price: 299
+}
+{
+  _id: ObjectId('685fc783570cd656d7442949'),
+  name: 'Keyboard',
+  price: 499
+}
+{
+  _id: ObjectId('685fc783570cd656d744294c'),
+  name: 'Pen Drive',
+  price: 999
+}
+{
+  _id: ObjectId('685fc783570cd656d744294a'),
+  name: 'Monitor',
+  price: 7999
+}
+{
+  _id: ObjectId('685fc783570cd656d744294b'),
+  name: 'CPU',
+  price: 15000
+}
+
+db.users.find().sort({ createdAt: -1 })
+
+{
+  _id: ObjectId('685fc7a6570cd656d744294d'),
+  username: 'john_doe',
+  email: 'john@example.com',
+  age: 29,
+  city: 'Delhi',
+  createdAt: 2024-05-01T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d7442951'),
+  username: 'dev_p',
+  email: 'dev@gmail.com',
+  age: 24,
+  city: 'Delhi',
+  createdAt: 2024-04-01T00:00:00.000Z,
+  active: false
+}
+{
+  _id: ObjectId('685fc7a6570cd656d744294f'),
+  username: 'ravi_s',
+  email: 'ravi@outlook.com',
+  age: 19,
+  city: 'Bangalore',
+  createdAt: 2024-03-15T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d7442950'),
+  username: 'nisha_r',
+  email: 'nisha@yahoo.com',
+  age: 32,
+  city: 'Bangalore',
+  createdAt: 2024-02-10T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d744294e'),
+  username: 'anu_k',
+  email: 'anu@gmail.com',
+  age: 35,
+  city: 'Mumbai',
+  createdAt: 2024-01-01T00:00:00.000Z,
+  active: false
+}
+
+db.users.find({}, { _id: 0, name: 1, email: 1 })
+
+{
+  email: 'john@example.com'
+}
+{
+  email: 'anu@gmail.com'
+}
+{
+  email: 'ravi@outlook.com'
+}
+{
+  email: 'nisha@yahoo.com'
+}
+{
+  email: 'dev@gmail.com'
+}
+
+db.students.find({ marks: { $gte: 60, $lte: 90 } })
+
+{
+  _id: ObjectId('685fc6bd570cd656d744293f'),
+  name: 'Aisha',
+  age: 24,
+  course: 'BBA',
+  marks: 67,
+  roll: 102
+}
+{
+  _id: ObjectId('685fc6bd570cd656d7442942'),
+  name: 'Dev',
+  age: 27,
+  course: 'BSc',
+  marks: 74,
+  roll: 105
+}
+
+db.sales.find({ $or: [ { amount: { $lt: 500 } }, { amount: { $gt: 5000 } } ] })
+
+{
+  _id: ObjectId('685fc7f0570cd656d744296e'),
+  invoiceId: 1,
+  amount: 450
+}
+{
+  _id: ObjectId('685fc7f0570cd656d744296f'),
+  invoiceId: 2,
+  amount: 10000
+}
+{
+  _id: ObjectId('685fc7f0570cd656d7442970'),
+  invoiceId: 3,
+  amount: 300
+}
+{
+  _id: ObjectId('685fc7f0570cd656d7442971'),
+  invoiceId: 4,
+  amount: 5500
+}
+
+db.orders.updateMany(
+  { deliveryDate: { $ne: null } },
+  { $set: { status: "completed" } }
+)
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+
+db.users.deleteMany({ active: false })
+
+{
+  acknowledged: true,
+  deletedCount: 2
+}
+
+db.users.find({ $or: [ { city: "Bangalore" }, { age: { $gt: 30 } } ] })
+
+{
+  _id: ObjectId('685fc7a6570cd656d744294f'),
+  username: 'ravi_s',
+  email: 'ravi@outlook.com',
+  age: 19,
+  city: 'Bangalore',
+  createdAt: 2024-03-15T00:00:00.000Z,
+  active: true
+}
+{
+  _id: ObjectId('685fc7a6570cd656d7442950'),
+  username: 'nisha_r',
+  email: 'nisha@yahoo.com',
+  age: 32,
+  city: 'Bangalore',
+  createdAt: 2024-02-10T00:00:00.000Z,
+  active: true
+}
+
+
+
