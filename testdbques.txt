@@ -1,0 +1,39 @@
+1. Insert a single student named Rahul, age 21, course BCA.
+
+2. Insert multiple employees: Anu (salary 28000, HR) and Ravi (salary 35000, Sales).
+
+3. Retrieve all documents from the products collection.
+
+4. Find users with age greater than 25.
+
+5. Find orders where status is "pending" or "shipped".
+
+6. Update the email of the user with username "john_doe" to "john@example.com".
+
+7. Delete the student with roll number 101.
+
+8. Find all employees with salary greater than or equal to 30000.
+
+9. Retrieve books written by "Chetan Bhagat" and published after 2010.
+
+10. Count the number of customers from Delhi.
+
+11. Display the first 5 users from the users collection.
+
+12. Skip the first 10 documents and retrieve the next 5 from the logs collection.
+
+13. Sort all products in ascending order by price.
+
+14. Sort all users in descending order by createdAt.
+
+15. Retrieve only the name and email fields from the users collection, excluding _id.
+
+16. Find students whose marks are between 60 and 90 (inclusive).
+
+17. Retrieve sales where the amount is less than 500 or greater than 5000.
+
+18. Update the status to "completed" for orders where deliveryDate is not null.
+
+19. Delete all users whose active field is false.
+
+20. Retrieve users who are either from Bangalore or have age greater than 30.
